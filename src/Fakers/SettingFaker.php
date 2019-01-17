@@ -16,8 +16,9 @@ class SettingFaker extends Faker
         $faker = Factory::create();
 
         $bag = new Bag();
-        $bag->set('name', $faker->name);
-        $bag->set('description', $faker->text);
+        $bag->set('key', $faker->name);
+        $bag->set('value', $faker->text);
+        $bag->set('user', UserFaker::make()->parameters()->toArray());
 
         return $bag;
     }

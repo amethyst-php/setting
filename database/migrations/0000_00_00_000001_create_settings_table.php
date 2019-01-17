@@ -14,8 +14,10 @@ class CreateSettingsTable extends Migration
     {
         Schema::create(Config::get('amethyst.setting.data.setting.table'), function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name')->unique();
-            $table->text('description')->nullable();
+            $table->string('key');
+            $table->text('value');
+            $table->integer('user_id')->unsigned()->nullable();
+            $table->foreign('user_id')->references('id')->on(Config::get('amethyst.user.data.user.table'));
             $table->timestamps();
             $table->softDeletes();
         });
