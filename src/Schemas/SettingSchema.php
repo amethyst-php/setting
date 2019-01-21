@@ -17,11 +17,13 @@ class SettingSchema extends Schema
     {
         return [
             Attributes\IdAttribute::make(),
-            Attributes\TextAttribute::make('key'),
+            Attributes\TextAttribute::make('key')
+                ->setRequired(true),
             Attributes\LongTextAttribute::make('value'),
             Attributes\BelongsToAttribute::make('user_id')
                 ->setRelationName('user')
-                ->setRelationManager(UserManager::class),
+                ->setRelationManager(UserManager::class)
+                ->setRequired(true),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
