@@ -13,7 +13,6 @@ class SettingServiceProvider extends CommonServiceProvider
     {
         parent::register();
 
-        //$this->loadExtraRoutes();
         $this->app->register(\Railken\Amethyst\Providers\UserServiceProvider::class);
     }
 }
