@@ -8,8 +8,7 @@ use Railken\Amethyst\Managers\SettingManager;
 
 class SettingsController extends RestManagerController
 {
-    use RestTraits\RestIndexTrait;
-    use RestTraits\RestStoreTrait;
+    use RestTraits\RestCommonTrait;
 
     /**
      * The class of the manager.
@@ -25,6 +24,15 @@ class SettingsController extends RestManagerController
     {
         $this->middleware('auth:api');
         parent::__construct();
+
+        $this->middleware(function ($request, $next) {
+            $request->request->remove('user');
+            $request->request->remove('user_id');
+            $request->request->add([
+                'user_id' => $this->getUser()->id,
+            ]);
+            return $next($request);
+        });
     }
 
     /**
