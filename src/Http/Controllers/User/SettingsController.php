@@ -31,6 +31,7 @@ class SettingsController extends RestManagerController
             $request->request->add([
                 'user_id' => $this->getUser()->id,
             ]);
+
             return $next($request);
         });
     }
