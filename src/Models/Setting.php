@@ -28,6 +28,6 @@ class Setting extends Model implements EntityContract
      */
     public function user(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(config('amethyst.user.data.user.model'));
     }
 }
