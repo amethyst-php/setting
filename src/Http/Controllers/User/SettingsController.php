@@ -11,6 +11,13 @@ class SettingsController extends RestManagerController
     use RestTraits\RestCommonTrait;
 
     /**
+     * Cache response?
+     *
+     * @var boolean
+     */
+    protected $cached = true;
+
+    /**
      * The class of the manager.
      *
      * @var string
