@@ -11,18 +11,18 @@ class SettingsController extends RestManagerController
     use RestTraits\RestCommonTrait;
 
     /**
-     * Cache response?
-     *
-     * @var boolean
-     */
-    protected $cached = true;
-
-    /**
      * The class of the manager.
      *
      * @var string
      */
     public $class = SettingManager::class;
+
+    /**
+     * Cache response?
+     *
+     * @var bool
+     */
+    protected $cached = true;
 
     /**
      * Create a new instance.
