@@ -5,6 +5,7 @@ namespace Railken\Amethyst\Http\Controllers\User;
 use Railken\Amethyst\Api\Http\Controllers\RestManagerController;
 use Railken\Amethyst\Api\Http\Controllers\Traits as RestTraits;
 use Railken\Amethyst\Managers\SettingManager;
+use Illuminate\Http\Request;
 
 class SettingsController extends RestManagerController
 {
@@ -18,29 +19,23 @@ class SettingsController extends RestManagerController
     public $class = SettingManager::class;
 
     /**
-     * Cache response?
-     *
-     * @var bool
-     */
-    protected $cached = true;
-
-    /**
      * Create a new instance.
      */
     public function __construct()
     {
         $this->middleware('auth:api');
         parent::__construct();
+    }
 
-        $this->middleware(function ($request, $next) {
-            $request->request->remove('user');
-            $request->request->remove('user_id');
-            $request->request->add([
-                'user_id' => $this->getUser()->id,
-            ]);
+    public function bootstrap(Request $request) 
+    {
+        $request->request->remove('user');
+        $request->request->remove('user_id');
+        $request->request->add([
+            'user_id' => $this->getUser()->id,
+        ]);
 
-            return $next($request);
-        });
+        parent::bootstrap($request);
     }
 
     /**
