@@ -2,10 +2,10 @@
 
 namespace Railken\Amethyst\Http\Controllers\User;
 
+use Illuminate\Http\Request;
 use Railken\Amethyst\Api\Http\Controllers\RestManagerController;
 use Railken\Amethyst\Api\Http\Controllers\Traits as RestTraits;
 use Railken\Amethyst\Managers\SettingManager;
-use Illuminate\Http\Request;
 
 class SettingsController extends RestManagerController
 {
@@ -27,7 +27,7 @@ class SettingsController extends RestManagerController
         parent::__construct();
     }
 
-    public function bootstrap(Request $request) 
+    public function bootstrap(Request $request)
     {
         $request->request->remove('user');
         $request->request->remove('user_id');
