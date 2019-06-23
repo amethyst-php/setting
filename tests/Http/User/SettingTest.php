@@ -31,7 +31,7 @@ class SettingTest extends BaseTest
      */
     protected $route = 'user.setting';
 
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
