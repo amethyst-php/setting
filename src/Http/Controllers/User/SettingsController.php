@@ -1,11 +1,11 @@
 <?php
 
-namespace Railken\Amethyst\Http\Controllers\User;
+namespace Amethyst\Http\Controllers\User;
 
 use Illuminate\Http\Request;
-use Railken\Amethyst\Api\Http\Controllers\RestManagerController;
-use Railken\Amethyst\Api\Http\Controllers\Traits as RestTraits;
-use Railken\Amethyst\Managers\SettingManager;
+use Amethyst\Api\Http\Controllers\RestManagerController;
+use Amethyst\Api\Http\Controllers\Traits as RestTraits;
+use Amethyst\Managers\SettingManager;
 
 class SettingsController extends RestManagerController
 {

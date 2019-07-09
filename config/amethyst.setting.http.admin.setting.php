@@ -2,7 +2,7 @@
 
 return [
     'enabled'    => true,
-    'controller' => Railken\Amethyst\Http\Controllers\Admin\SettingsController::class,
+    'controller' => Amethyst\Http\Controllers\Admin\SettingsController::class,
     'router'     => [
         'as'     => 'setting.',
         'prefix' => '/settings',

@@ -1,10 +1,10 @@
 <?php
 
-namespace Railken\Amethyst\Tests\Http\User;
+namespace Amethyst\Tests\Http\User;
 
-use Railken\Amethyst\Api\Support\Testing\TestableBaseTrait;
-use Railken\Amethyst\Fakers\SettingFaker;
-use Railken\Amethyst\Tests\BaseTest;
+use Amethyst\Api\Support\Testing\TestableBaseTrait;
+use Amethyst\Fakers\SettingFaker;
+use Amethyst\Tests\BaseTest;
 
 class SettingTest extends BaseTest
 {
@@ -54,7 +54,7 @@ class SettingTest extends BaseTest
     protected function getPackageProviders($app)
     {
         return array_merge(parent::getPackageProviders($app), [
-            \Railken\Amethyst\Providers\AuthenticationServiceProvider::class,
+            \Amethyst\Providers\AuthenticationServiceProvider::class,
         ]);
     }
 }
