@@ -12,7 +12,5 @@ class SettingServiceProvider extends CommonServiceProvider
     public function register()
     {
         parent::register();
-
-        $this->app->register(\Amethyst\Providers\UserServiceProvider::class);
     }
 }

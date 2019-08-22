@@ -23,12 +23,4 @@ class Setting extends Model implements EntityContract
         $this->ini('amethyst.setting.data.setting');
         parent::__construct($attributes);
     }
-
-    /**
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function user(): BelongsTo
-    {
-        return $this->belongsTo(config('amethyst.user.data.user.model'));
-    }
 }

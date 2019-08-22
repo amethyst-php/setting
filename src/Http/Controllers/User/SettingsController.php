@@ -26,23 +26,4 @@ class SettingsController extends RestManagerController
         $this->middleware('auth:api');
         parent::__construct();
     }
-
-    public function bootstrap(Request $request)
-    {
-        $request->request->remove('user');
-        $request->request->remove('user_id');
-        $request->request->add([
-            'user_id' => $this->getUser()->id,
-        ]);
-
-        parent::bootstrap($request);
-    }
-
-    /**
-     * Create a new instance for query.
-     */
-    public function getQuery()
-    {
-        return $this->getManager()->getRepository()->getQuery()->where('user_id', $this->getUser()->id);
-    }
 }
