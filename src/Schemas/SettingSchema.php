@@ -19,7 +19,7 @@ class SettingSchema extends Schema
             Attributes\IdAttribute::make(),
             Attributes\TextAttribute::make('key')
                 ->setRequired(true),
-            Attributes\LongTextAttribute::make('value'),
+            Attributes\ObjectAttribute::make('value'),
             Attributes\CreatedAtAttribute::make(),
             Attributes\UpdatedAtAttribute::make(),
             Attributes\DeletedAtAttribute::make(),
