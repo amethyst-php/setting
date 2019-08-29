@@ -5,7 +5,6 @@ namespace Amethyst\Http\Controllers\User;
 use Amethyst\Api\Http\Controllers\RestManagerController;
 use Amethyst\Api\Http\Controllers\Traits as RestTraits;
 use Amethyst\Managers\SettingManager;
-use Illuminate\Http\Request;
 
 class SettingsController extends RestManagerController
 {

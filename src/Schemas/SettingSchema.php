@@ -2,7 +2,6 @@
 
 namespace Amethyst\Schemas;
 
-use Amethyst\Managers\UserManager;
 use Railken\Lem\Attributes;
 use Railken\Lem\Schema;
 
