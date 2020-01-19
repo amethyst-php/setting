@@ -2,7 +2,7 @@
 
 namespace Amethyst\Tests\Http\User;
 
-use Amethyst\Api\Support\Testing\TestableBaseTrait;
+use Amethyst\Core\Support\Testing\TestableBaseTrait;
 use Amethyst\Fakers\SettingFaker;
 use Amethyst\Tests\BaseTest;
 
