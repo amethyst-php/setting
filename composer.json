@@ -4,15 +4,15 @@
     "keywords": ["laravel", "amethyst", "amethyst-setting", "setting"],
     "license": "MIT",
     "require": {
-        "php": ">=7.1",
-        "amethyst/common": "0.1.*",
-        "amethyst/user": "0.1.*",
-        "amethyst/permission": "0.1.*"
+        "php": ">=7.2",
+        "amethyst/core": "0.2.*",
+        "amethyst/user": "0.2.*",
+        "amethyst/permission": "0.2.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "~7.1",
-        "orchestra/testbench": "3.*",
-        "amethyst/authentication": "0.1.*"
+        "phpunit/phpunit": "*",
+        "orchestra/testbench": "*",
+        "amethyst/authentication": "0.2.*"
     },
     "autoload": {
         "psr-4" : {
