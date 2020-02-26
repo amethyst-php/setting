@@ -6,8 +6,7 @@
     "require": {
         "php": ">=7.2",
         "amethyst/core": "0.2.*",
-        "amethyst/user": "0.2.*",
-        "amethyst/permission": "0.2.*"
+        "amethyst/user": "0.2.*"
     },
     "require-dev": {
         "phpunit/phpunit": "*",
