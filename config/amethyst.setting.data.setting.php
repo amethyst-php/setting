@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'table'      => 'amethyst_settings',
+    'table'      => 'setting',
     'comment'    => 'Setting',
     'model'      => Amethyst\Models\Setting::class,
     'schema'     => Amethyst\Schemas\SettingSchema::class,
