@@ -4,14 +4,13 @@
     "keywords": ["laravel", "amethyst", "amethyst-setting", "setting"],
     "license": "MIT",
     "require": {
-        "php": ">=7.2",
-        "amethyst/core": "0.2.*",
-        "amethyst/user": "0.2.*"
+        "php": ">=8.2",
+        "amethyst/core": "0.3.*",
+        "amethyst/user": "0.3.*"
     },
     "require-dev": {
-        "phpunit/phpunit": "*",
         "orchestra/testbench": "*",
-        "amethyst/authentication": "0.2.*"
+        "amethyst/authentication": "0.3.*"
     },
     "autoload": {
         "psr-4" : {
